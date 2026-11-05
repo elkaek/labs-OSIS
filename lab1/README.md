@@ -83,7 +83,7 @@ systemctl restart ssh
 ```
 <img width="1280" height="800" alt="VirtualBox_Debian_23_10_2026_03_41_43" src="https://github.com/user-attachments/assets/77fa9b60-07ca-4bdb-8a46-0ca957f0d871" />
 
-  **Проверка сетевых параметров системы:**
+  **Проверка SSH серверов:**
 
 <img width="1280" height="800" alt="VirtualBox_Debian_23_10_2026_03_42_01" src="https://github.com/user-attachments/assets/74e67d45-d77e-4f03-b1fb-903e17876bdf" />
 
