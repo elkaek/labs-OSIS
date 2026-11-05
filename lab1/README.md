@@ -14,7 +14,7 @@
 
 Для работы использовался гипервизор **Oracle VM VirtualBox** с официального вебсайта https://www.virtualbox.org/wiki/Downloads. Установлено имя ВМ. с установленным пакетом расширений (*Extension Pack*).
 
-  ![VirtualBox Extension Pack](<img width="955" height="230" alt="Снимок экрана 2026-10-23 022945" src="https://github.com/user-attachments/assets/d70e0371-b640-4547-bf26-2980d36ce48a" />)
+  (<img width="955" height="230" alt="Снимок экрана 2026-10-23 022945" src="https://github.com/user-attachments/assets/d70e0371-b640-4547-bf26-2980d36ce48a" />)
 
 Была создана новая виртуальная машина со следующими параметрами:
 
@@ -24,7 +24,7 @@
 
   **Путь к ISO-образу:** `debian-13.7.0-amd64-netinst.iso`
 
-  ![Создание ВМ - Имя и ОС](<img width="1055" height="495" alt="Снимок экрана 2026-10-23 024023" src="https://github.com/user-attachments/assets/a4c1d30e-93a3-43d4-ae2f-c1dc8f1ddbf1" />)
+  (<img width="1055" height="495" alt="Снимок экрана 2026-10-23 024023" src="https://github.com/user-attachments/assets/a4c1d30e-93a3-43d4-ae2f-c1dc8f1ddbf1" />)
 
 ### Конфигурация аппаратных ресурсов:
 
@@ -34,13 +34,13 @@
 
   **Жесткий диск:** 30 ГБ (динамический VDI)
 
-  ![Настройка оборудования](<img width="1056" height="494" alt="Снимок экрана 2026-10-23 024312" src="https://github.com/user-attachments/assets/feba9b37-7d85-454f-9768-397af67fb805" />)
+  (<img width="1056" height="494" alt="Снимок экрана 2026-10-23 024312" src="https://github.com/user-attachments/assets/feba9b37-7d85-454f-9768-397af67fb805" />)
 
-  ![Итог создания ВМ](<img width="1053" height="497" alt="Снимок экрана 2026-10-23 024334" src="https://github.com/user-attachments/assets/0a323b98-75f9-4825-aa19-0aaadc016d4b" />)
+  (<img width="1053" height="497" alt="Снимок экрана 2026-10-23 024334" src="https://github.com/user-attachments/assets/0a323b98-75f9-4825-aa19-0aaadc016d4b" />)
 
 После завершения мастера создания общая сводка параметров отобразилась в панели управления VirtualBox:
 
-  ![Главное окно VirtualBox ВМ создана](<img width="936" height="1001" alt="Снимок экрана 2026-10-23 035357" src="https://github.com/user-attachments/assets/c3cdc0b7-f35d-4e3d-9478-595ef8a73250" />)
+  (<img width="936" height="1001" alt="Снимок экрана 2026-10-23 035357" src="https://github.com/user-attachments/assets/c3cdc0b7-f35d-4e3d-9478-595ef8a73250" />)
 
 ---
 
