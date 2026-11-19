@@ -101,3 +101,65 @@ last
 
 
 Мониторинг активности пользователей
+
+## 5 Автоматизация управления пользователями
+
+Создал текстовый файл staff.txt со списком пользователей и их целевых групп AM, Arthas, Papanya и написали bash-скрипт bananza_bum.sh, который построчно читает файл, пропускает пустые строки, проверяет существование группы (getent group) и пользователя, а потом автоматически создаёт недостающие учётные записи и добавляет их в соответствующие группы
+
+staff.txt
+```
+AM developers
+Arthas testers
+Papanya developers
+```
+bananza_bum.sh
+```bash
+#!/bin/bash
+
+FILE="staff.txt"
+
+while read user grp; do
+    [ -z "\$user" ] && continue
+
+    # тут создаём группу если ещё нет
+    if ! getent group "\$grp" > /dev/null; then
+        groupadd "\$grp"
+        echo "группа \$grp заспавнилась"
+    fi
+
+    # создаю пользователя если его ещё нет
+    if id "\$user" > /dev/null 2>&1; then
+        echo "пользователь \$user уже живёт"
+    else
+        useradd -m -s /bin/bash -G "grp" "user"
+        echo "пользователь user успешно проявился (группа grp)"
+    fi
+done < "\$FILE"
+```
+
+<img width="623" height="405" alt="Снимок экрана 2026-11-20 051839" src="https://github.com/user-attachments/assets/8106bc74-207c-4df1-ac54-f832f7aa1407" />
+
+
+Код bananza_bum.sh
+
+Сделал скрипт исполняемым (chmod +x bananza_bum.sh), запустил его и проверил состав групп developers и testers командой getent group
+
+```
+chmod +x bananza_bum.sh
+cat staff.txt
+./bananza_bum.sh
+getent group developers testers
+```
+
+<img width="437" height="300" alt="Снимок экрана 2026-11-20 052151" src="https://github.com/user-attachments/assets/3c967ea7-4e44-4b53-b118-39ec68a70c1b" />
+
+
+Запуск скрипта и проверка состава групп
+
+## Вывод
+
+В ходе выполнения лабы были изучены базовые инструменты администрирования пользователей, групп и прав доступа в ОС Linux (Debian)
+Освоено создание учётных записей через useradd, управление группами groupadd, usermod -aG, смена паролей и блок/разблок пользователей (passwd, usermod -L/-U)
+Настроено разграничение прав доступа к каталогам с помощью команд chown и chmod
+Изучены утилиты мониторинга активности пользователей в системе (who, w, last)
+Разработан bash-скрипт с проверками существования объектов (getent, id) для авто массового создания пользователей и групп из текстового файла
